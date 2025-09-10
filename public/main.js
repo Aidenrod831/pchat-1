@@ -497,7 +497,7 @@ $(function () {
         }, 80000);
         setTimeout(function () {
           alert("dont even try to do it... refreshing restarts it all");
-          document.cookie = "monde=1";
+          document.cookie = "cookie=1";
         }, 90000);
         setTimeout(function () {
           location.reload();
