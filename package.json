@@ -1,0 +1,19 @@
+{
+	"name": "pchat",
+	"version": "0.1.0",
+	"description": "A node js chat app",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.18.2",
+		"socket.io": "^4.8.1"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"chat"
+	],
+	"license": "MIT"
+}
