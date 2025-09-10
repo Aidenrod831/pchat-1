@@ -3,7 +3,7 @@
 /* Made with Socket.io */
 console.log("AHHHH im in the uhhh... where am i?");
 Notification.requestPermission();
-alert("IOOO MATE TURN ON NOTIFICATIONS AND POP-UPS & REDIRECTS... plz?");
+alert("pls turn on notifications for extra funnies");
 $(function () {
   var FADE_TIME = 150; // ms
   var TYPING_TIMER_LENGTH = 400; // ms
@@ -415,8 +415,6 @@ $(function () {
         alert(
           "you have been perm banned from pchat-1-clone for the following reason: ..."
         );
-        window.open("https://you-are-an-idiot-too.glitch.me");
-        window.open("https://youdontknowwhoiam.glitch.me");
         window.close();
         location.reload();
         break;
@@ -436,7 +434,7 @@ $(function () {
         message = "hello world";
         log(message);
         var notification = new Notification(
-          "achivement get: shut up pecoka #29"
+          "achivement get: hello world #29"
         );
         break;
       case "console":
@@ -463,13 +461,13 @@ $(function () {
           console.log("please?");
         }, 25000);
         setTimeout(function () {
-          console.log("it was all mondes fault");
+          console.log("it was all #####s fault");
         }, 30000);
         setTimeout(function () {
-          console.log("it was all monde");
+          console.log("it was all #####");
         }, 35000);
         setTimeout(function () {
-          console.log("DON'T TRUST THE PIE");
+          console.log("DON'T TRUST THE ###");
         }, 40000);
         setTimeout(function () {
           console.log("oh my name?");
@@ -577,6 +575,22 @@ $(function () {
         log(message);
         var notification = new Notification(
           "achivement get: The man behind the slaughter #38"
+        );
+        break;
+      case "sybau":
+        message =
+          "im good";
+        log(message);
+        var notification = new Notification(
+          "achivement get: sybau <3 #39"
+        );
+        break;
+      case "yourcringe":
+        message =
+          "i agree";
+        log(message);
+        var notification = new Notification(
+          "achivement get: that was old me this the new me #40"
         );
         break;
       
