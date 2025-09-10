@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PChat clone</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.glitch.com/0a222ae6-5b19-407d-aa28-e1164adb0b11%2Ffavicon-32x32.png?1557621774399"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://use.typekit.net/ama5eep.js"></script>
+    <script>
+      try {
+        Typekit.load({ async: true });
+      } catch (e) {}
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </head>
+
+  <body>
+    <ul class="pages" id="all-page">
+      <video autoplay muted loop id="myVideo">
+        <source
+          src="http://cdn.glitch.com/42569d84-4c33-419f-a808-aa0624b5b748%2FLittle%20Campfire.mp4?1557078872099"
+          type="video/mp4"
+        />
+        Video not supported.
+      </video>
+      <li class="chat page" id="chat-page">
+        <div class="chatArea">
+          <ul class="messages"></ul>
+        </div>
+
+        <button class="btn btn-tips" title="hint">?</button>
+
+        <div id="effect-tips" class="ui-tips">
+          <h3 class="tips-title">hint</h3>
+          <div class="tips">
+            <h3>System instruction</h3>
+            <h4>/join [room name]: create / join the room</h4>
+            (The length of the room name is limited to 1 to 14 characters. It
+            can only be composed of Chinese, English, numbers and the bottom
+            line) Never gonna give you up never gonna let you down never gonna
+            run around and dessert you https://youtu.be/dQw4w9WgXcQ do not trust
+            the duck and Gherio is not the owner you have joined theroom isn't
+            getting fixed lol<br /><br />
+            <h4>/refresh: Refresh the room list</h4>
+            (The system will automatically refresh every 30 seconds, and someone
+            will join or leave the room will refresh immediately）also press f
+            to pay respects to Pchat https://youtu.be/uivFFnCI8tM?t=41 Ｎ if you
+            have a funny idea for pchat email me pulsar07.scarves@icloud.com also i made this https://y99.in/r/1204079
+            <button
+              onclick="var notification = new Notification('achivement get: gullible (NULL achivement)'); alert('dawg i aint giving you mod'); location.reload();"
+            >
+              <h>CLICK HERE TO GAIN MOD PERMS</h>
+            </button>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/eXwwwdKnmNs?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263457548&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                font-weight: 100;
+              "
+            >
+              <a
+                href="https://soundcloud.com/owlchemylabs"
+                title="Owlchemy Labs"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >Owlchemy Labs</a
+              >
+              ·
+              <a
+                href="https://soundcloud.com/owlchemylabs/job-simulator-you-are-a-model-human-ft-commander-meouch-of-twrp"
+                title="(You Are A) Model Human by Jogurt Ft. Commander Meouch Of TWRP"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >(You Are A) Model Human by Jogurt Ft. Commander Meouch Of
+                TWRP</a
+              >
+            </div>
+            <br />
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/928519846&color=%2364b4ec&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                font-weight: 100;
+              "
+            >
+              <a
+                href="https://soundcloud.com/phantom-ghost239"
+                title=":):"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >:):</a
+              >
+              ·
+              <a
+                href="https://soundcloud.com/phantom-ghost239/alone-clark-s-nova-die"
+                title="Alone - Clark S. Nova - Die Maschine song"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >Alone - Clark S. Nova - Die Maschine song</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <input
+          class="inputMessage"
+          placeholder="Type here... THE D.U.C.K WAS HERE"
+        />
+      </li>
+
+      <li class="login page" id="login-page">
+        <div class="form">
+          <center>
+            <h1 class="title">PChat</h1>
+          </center>
+          <h3 class="subtitle">Enter you name here:</h3>
+          <label>
+            <input
+              class="usernameInput"
+              type="text"
+              maxlength="14"
+              title="The nickname needs to be composed of 1-14 characters."
+              autofocus
+            />
+          </label>
+        </div>
+      </li>
+
+      <li class="room page" id="room-page">
+        <h1 class="room-title">Room list</h1>
+        <p class="room-hint">Click the room block to join the room.</p>
+        <ul class="room-list"></ul>
+      </li>
+    </ul>
+  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-152614404-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-152614404-1");
+  </script>
+  <script>
+    var videoStorage = [
+        "//cdn.glitch.com/3f0c66dc-293f-43c1-8e67-067e8003545f%2FSpace%20Flight%20Loop.mp4?1557015269099",
+        "//cdn.glitch.com/3f0c66dc-293f-43c1-8e67-067e8003545f%2FMythic-Horizon-Live-Wallpaper.mp4?1557076643223",
+        "//cdn.glitch.com/42569d84-4c33-419f-a808-aa0624b5b748%2FLittle%20Campfire.mp4?1557078872099",
+        "//cdn.glitch.com/42569d84-4c33-419f-a808-aa0624b5b748%2FAnimated%20Forest%20Snow%204K.mp4?1557078879475",
+        "//cdn.glitch.com/42569d84-4c33-419f-a808-aa0624b5b748%2FLong%204K%20Moving%20Background%20-%2010_00%20Minutes%20Colorful%20Space%20-%20AA%20VFX.mp4?1557077932799",
+        "//cdn.glitch.com/42569d84-4c33-419f-a808-aa0624b5b748%2FAmazing%20Landscape-%20Wallpaper%20Engine.mp4?1557080022320",
+      ],
+      video = document.querySelector("video"),
+      // choose one random url from our storage as the active video
+      activeVideoUrl =
+        videoStorage[Math.round(Math.random() * (videoStorage.length - 1))];
+
+    // check which file extension your browser can play and set the video source accordingly
+    if (video.canPlayType("video/webm")) {
+      video.setAttribute("src", activeVideoUrl + ".webm");
+    } else if (video.canPlayType("video/mp4")) {
+      video.setAttribute("src", activeVideoUrl + ".mp4");
+    }
+    /*}
+    }*/
+  </script>
+</html>
